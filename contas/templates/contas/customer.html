@@ -1,0 +1,69 @@
+{%  extends 'contas/main.html' %}
+
+{% block content %}
+
+	<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Cliente</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Atualizar cliente</a>
+			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Apagar cliente</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Contato</h5>
+			<hr>
+			<p>Email: </p>
+			<p>Telefone: </p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Total de pedidos</h5>
+			<hr>
+			<h1 style="text-align: center;padding: 10px"></h1>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<form method="get">
+
+		    <button class="btn btn-primary" type="submit">Buscar</button>
+		  </form>
+		</div>
+	</div>
+	
+</div>
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Produtos</th>
+					<th>Categoria</th>
+					<th>Data encomendada</th>
+					<th>Status</th>
+					<th>Atualizar</th>
+					<th>Apagar</th>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
