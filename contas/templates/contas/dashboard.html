@@ -36,7 +36,7 @@
 		<h5>Últimos 5 pedidos</h5>
 		<hr>
 		<div class="card card-body">
-			<a class="btn btn-primary  btn-sm btn-block" href="">Criar pedido</a>
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'create_order'%}">Criar pedido</a>
 			<table class="table table-sm">
 				<tr>
 					<th>Produto</th>
@@ -51,8 +51,8 @@
 						<td>{{order.product}}</td>
 						<td>{{order.date_created}}</td>
 						<td>{{order.status}}</td>
-						<td><a class="btn btn-sm btn-info" href="">Atualizar</a></td>
-						<td><a class="btn btn-sm btn-danger" href="">Remover</a></td>
+						<td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id%}">Atualizar</a></td>
+						<td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id%}">Remover</a></td>
 						
 
 					</tr>
