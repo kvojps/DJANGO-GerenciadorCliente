@@ -14,12 +14,15 @@
 			<a class="btn btn-primary  btn-sm btn-block" href="">Criar cliente</a>
 			<table class="table table-sm">
 				<tr>
+					<th></th>
 					<th>Cliente</th>
 					<th>Telefone</th>
 				</tr>
 
 				{% for customer in customers %}
 					<tr>
+						<td> <a class="btn btn-sm btn-info" 
+						href="{% url 'customer' customer.id%}"> Ver</a></td>
 						<td>{{customer.name}}</td>
 						<td>{{customer.phone}}</td>
 					</tr>
@@ -48,8 +51,8 @@
 						<td>{{order.product}}</td>
 						<td>{{order.date_created}}</td>
 						<td>{{order.status}}</td>
-						<td><a href="">Atualizar</a></td>
-						<td><a href="">Remover</a></td>
+						<td><a class="btn btn-sm btn-info" href="">Atualizar</a></td>
+						<td><a class="btn btn-sm btn-danger" href="">Remover</a></td>
 						
 
 					</tr>
